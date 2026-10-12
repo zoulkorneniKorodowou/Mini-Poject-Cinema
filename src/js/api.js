@@ -1,3 +1,4 @@
+import { Movie } from "./movie.js"
 async function apiFetch(){
     try {
         const retour = await fetch("http://www.omdbapi.com/?i=tt3896198&apikey=c1d81bbb")
