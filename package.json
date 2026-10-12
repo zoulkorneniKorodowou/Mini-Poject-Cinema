@@ -1,0 +1,23 @@
+{
+  "name": "mini-poject-cinema",
+  "version": "1.0.0",
+  "description": "Mini-projet web front-end permettant aux clients d'un cinéma de découvrir les films à l'affiche et d'effectuer des recherches détaillées via l'API OMDb.",
+  "homepage": "https://github.com/zoulkorneniKorodowou/Mini-Poject-Cinema#readme",
+  "bugs": {
+    "url": "https://github.com/zoulkorneniKorodowou/Mini-Poject-Cinema/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoulkorneniKorodowou/Mini-Poject-Cinema.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve ."
+  },
+  "devDependencies": {
+    "serve" : "^14.2.6"
+  }
+}
