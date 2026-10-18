@@ -1,6 +1,6 @@
 class Movie {
     constructor(data){
-        this.id = data.imbdID;
+        this.id = data.imdbID;
         this.year = data.Year;
         this.title = (data.Title && data.Title !== "N/A") ? data.Title : "Pas de titre disponible pour ce film"
         this.resume = data.Plot;
