@@ -176,6 +176,11 @@ body {
         }
       }
     }
+    #search_results{
+      p{
+        text-align: center;
+      }
+    }
   }
 
   footer {

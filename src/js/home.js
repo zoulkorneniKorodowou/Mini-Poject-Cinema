@@ -45,7 +45,7 @@ ids_tabs.forEach(async (element) => {
   plot_movie.setAttribute("class", "movie_plot");
   const infos_more = document.createElement("a");
   infos_more.setAttribute("class", "btn_details");
-  infos_more.setAttribute('href',`./pages/movie.html?id=${film.id}` );
+  infos_more.setAttribute('href',`./pages/movie.html` );
 
   title_movie.textContent = film.title;
   plot_movie.textContent = film.resume;
