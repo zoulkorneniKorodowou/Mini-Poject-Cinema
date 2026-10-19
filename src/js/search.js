@@ -31,42 +31,7 @@ btn_search.addEventListener('click', async ()=>{
       const img_poster_movie = document.createElement("img");
       img_poster_movie.setAttribute("src", element.poster !== "N/A" ? element.poster : "https://img.freepik.com/free-vector/404-error-background_23-2148071744.jpg?semt=ais_hybrid");
       img_poster_movie.setAttribute("class", "movie_poster");
-    
-      //recuperation de l'ID
-      let movieID = element.id;
-      console.log(movieID);
-      let movies_byID = await filmApiFetchById(movieID);
-      console.log(movies_byID);
-      //badges
-      const badges_movie = document.createElement("div");
-      badges_movie.setAttribute("class", "badges");
-    
-      //contenants de badges des spans
-      const badges_span1 = document.createElement("span");
-      const badges_span2 = document.createElement("span");
-      const badges_span3 = document.createElement("span");
-      const badges_span4 = document.createElement("span");
-      const badges_span5 = document.createElement("span");
-      badges_span1.setAttribute("class", "badge");
-      badges_span2.setAttribute("class", "badge");
-      badges_span3.setAttribute("class", "badge");
-      badges_span4.setAttribute("class", "badge");
-      badges_span5.setAttribute("class", "badge");
-      badges_span1.textContent = element.year;
-      badges_span2.textContent = movies_byID.genre ;
-      badges_span3.textContent = movies_byID.actors ;
-      badges_span4.textContent = movies_byID.rate ;
-
-    
-      //ajout des spans  a badges
-      badges_movie.appendChild(badges_span1);
-      badges_movie.appendChild(badges_span2);
-      badges_movie.appendChild(badges_span3);
-      badges_movie.appendChild(badges_span4);
-    
-      //ajout de l'image et badges au div poster
       poster_movie.appendChild(img_poster_movie);
-      poster_movie.appendChild(badges_movie);
     
       const infos_movie = document.createElement("div");
       infos_movie.setAttribute("class", "movie_infos");
@@ -74,7 +39,6 @@ btn_search.addEventListener('click', async ()=>{
       title_movie.setAttribute("class", "movie_title");
       const infos_more = document.createElement("a");
       infos_more.setAttribute("class", "btn_details");
-      infos_more.setAttribute('href',`./pages/movie.html?id=${element.id}` );
     
       title_movie.textContent = element.title;
       infos_more.textContent = "En savoir plus";

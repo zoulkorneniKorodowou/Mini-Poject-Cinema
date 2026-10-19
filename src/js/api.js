@@ -23,7 +23,6 @@ export async function filmApiFetchById(identity) {
         const data = await retour.json();
         if(data.Response === "True"){
             const myFilm = new Movie(data);
-            
             return myFilm;
         }else{
             console.warn("Aucun film trouvé :", data.Error);
