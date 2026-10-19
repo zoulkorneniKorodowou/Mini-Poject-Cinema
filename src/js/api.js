@@ -7,8 +7,7 @@ export async function filmApiFetch(title){
         const retour = await fetch(`${start_request}?apikey=${api_key}&s=${title}`);
         const data = await retour.json();
         if(data.Response === "True"){
-            let myFilm = data.Search.map((film) => new Movie(film));
-            console.log(myFilm);   
+            const myFilm = data.Search.map((film) => new Movie(film));
             return myFilm;
         }else{
             console.warn("Aucun film trouvé :", data.Error);
@@ -17,13 +16,14 @@ export async function filmApiFetch(title){
         console.log('Erreur', error)
     }
 };
+
 export async function filmApiFetchById(identity) {
     try {
         const retour = await fetch(`${start_requestId}?i=${identity}&apikey=${api_key}`);
         const data = await retour.json();
         if(data.Response === "True"){
             const myFilm = new Movie(data);
-            console.log(myFilm);
+            
             return myFilm;
         }else{
             console.warn("Aucun film trouvé :", data.Error);

@@ -5,6 +5,7 @@ const trendings_movies = document.getElementById("trendings_movies");
 ids_tabs.forEach(async (element) => {
   if (!element) return;
   const film = await filmApiFetchById(element);
+  console.log(film);
   if (!film) return;
   const article_movie = document.createElement("article");
   article_movie.setAttribute("class", "movie_card");
