@@ -1,11 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cine WONOU Accueil</title>
+    <link rel="stylesheet" href="./src/css/style_file.css">
+    <script type="module" src="./src/js/home.js"></script>
+    
 </head>
+
 <body>
-    <script type="module" src="src/js/api.js"></script>
+    <header>
+        <div id="logo">
+            <img src="./src/images/logoWonou.jpeg" alt="logo du ciné WONOU">
+        </div>
+        <div>
+            <h1>Ciné<span>WONOU</span></h1>
+        </div>
+        <div>
+            <nav id="navbar">
+
+                <li>
+                    <a href="./index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="./pages/search.html">Recherche</a>
+                </li>
+
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="trendings" class="movies_section">
+            <div class="section_header">
+                <h1>À la 1e</h1>
+            </div>
+            <div id="trendings_movies" class="movies_grid"></div>
+        </section>
+
+        <section class="movies_section" id="others">
+            <div class="section_header">
+                <h2>
+                    Autres
+                </h2>
+            </div>
+            <div class="movies_grid" id="others_movies">
+                
+            </div>
+            <div class="load_more">
+                <button id="btn_load_more" class="btn_details">Charger plus de films</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="foot_displays" id="networks">
+            <div>
+                <h2>
+                    Suivez-nous
+                </h2>
+            </div>
+            <a href="./pages/404.html">
+                <img src="./src/images/logoFacebook.webp" alt="logo de facebook">
+            </a><a href="./pages/404.html">
+                <img src="./src/images/logoInsta.webp" alt="logod'instagram">
+            </a><a href="./pages/404.html">
+                <img src="./src/images/loloTiktok.webp" alt="logo de tiktok">
+            </a>
+        </section>
+        <section class="foot_displays" id="legal_infos">
+            <div>
+                <a href="./pages/404.html" class="infos">Infos Legales</a>
+            </div>
+            <div>
+                <details>
+                    <summary>
+                        Contacts
+                    </summary>
+                    <h4>
+                        +33 744565426
+                    </h4>
+                    <h4>
+                        wonou.cine@gmail.com
+                    </h4>
+                </details>
+            </div>
+        </section>
+    </footer>
 </body>
+
 </html>
