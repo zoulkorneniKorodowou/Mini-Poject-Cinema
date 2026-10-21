@@ -7,7 +7,7 @@ class Movie {
         this.genre = (data.Genre && data.Genre !== "N/A") ? data.Genre : "Pas de genre disponible pour ce film"
         this.actors = data.Actors;
         this.dvd = data.DVD;
-        this.rate = (data.Rated && data.Rated !== "N/A") ? data.Rated : "Pas de note pour ce film"
+        this.rate = (data.imdbRating && data.imdbRating !== "N/A") ? data.imdbRating : "Pas de note pour ce film"
         this.poster = (data.Poster && data.Poster !== "N/A") ? data.Poster : "https://img.freepik.com/free-vector/404-error-background_23-2148071744.jpg?semt=ais_hybrid";
     };
     getInfoBrief(){
